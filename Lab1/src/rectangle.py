@@ -5,7 +5,18 @@
  Note that there is no constructor or destructor,
  so a default one will be created for us.
 """
-class Rectangle:
+
+class Shape:
+    def set_values(self):
+        pass
+    def area(self):
+        pass
+    
+class Rectangle(Shape):
+    def __init__(self, width=None, height=None):
+        self._width = width
+        self._height = height
+        
     def set_values(self, x, y):
         self.width = x
         self.height = y
