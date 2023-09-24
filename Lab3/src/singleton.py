@@ -1,6 +1,14 @@
 class Logger:
     _instance = None  # Private class variable to hold the single instance
 
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            print('Logger created exactly once')
+            cls.instance = super(Logger, cls).__new__(cls)
+        else:
+            print('Logger already created')
+        return cls.instance
+    
     def __init__(self):
         self.messages = []
 

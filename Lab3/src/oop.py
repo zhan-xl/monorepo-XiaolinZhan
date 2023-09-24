@@ -50,6 +50,7 @@ def main():
     # Create a second image
     image2 = Image(image1.getWidth(), image1.getHeight())
 
+    texture = Texture(100, 200)
     print(f"image1: {image1.getWidth()}, {image1.getHeight()}")
     print(f"image1 red color at (0, 0): {image1.getPixelColorR(0, 0)}")
     print(f"image2: {image2.getWidth()}, {image2.getHeight()}")
