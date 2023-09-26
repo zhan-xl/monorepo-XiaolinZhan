@@ -6,17 +6,18 @@ Update your answers to the following questions, make sure to commit this file an
 ## Task 1 - oop.py
 
 1. Is Object an abstract or a concrete class? Explain why:
-	- Object is a concrete class. Becasue 
+	- Object is a concrete class. Becasue an object contains information and it is initiated to represent something, whereas abstract class is normaly used as a templete for other class.
 1. The 'Image' class has commented code for a `__del__` method. What does this commented-out method do?
-	- *edit your response*
+	- This method is called when the instance of the class is about to be delete. By inplement this method to ensure that the instance is properly decounstructed.
 1. What class does Texture inherit from?
-	- *edit your response*
+	- Image class.
 1. What methods and attributes does the Texture class inherit from 'Image'? 
-	- *edit your response*
+	- Attributes: width, height, colorChannels, pixels;
+	- Methods: getWidth, getHeight, getPixelColorR, getPixels, setPixelsToRandomValue.
 1. Do you think a texture should have a 'has-a' (composition) or 'is-a'(inheritance) relationship with 'Image'? If you think it is a 'has-a' relationship, refactor the code. As long as you defend your decision in the response below it could be either--but defend your position well!
-	- *edit your response*
+	- I think the Texture class has a 'is-a' relationship with Image. The Image class can have multiple children like Textrue class to be shown on the screen.
 1. I did not declare a constructor for Texture. Does Python automatically create constructors for us? 
-	- *edit your response*
+	- Because the texture class passes it's constructor to the super class(Image)
 
 ## Task 2 - Singleton
 
@@ -30,5 +31,5 @@ Hint: Look at Lecture 3 slides for an example of creating a Singleton in Python
 
 1. Are singleton's in Python thread safe? Why or why not?
 
-*edit the code directly*  
+  - Singleton in Python is not thread safe. Becasue it uses _instance as a flag for the existency. So one thread could read None when the order thread already created the instence but not yet change the flag.
   
