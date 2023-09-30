@@ -16,21 +16,29 @@
 
 **Trigger**: Keyborad input from 1 to 8.
   
-**Scenario**: After pressing number keys from 1 t 8, the painting color should change acoordingly. 
+**Scenario**: User would press number keys from 1 t 8 to select a color for painting.
+                1 = Black
+                2 = White
+                3 = Red
+                4 = Green
+                5 = Blue
+                6 = Yellow
+                7 = Magenta
+                8 = Cyan
  
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Exceptions**: The paint color should change accordingly.
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: High
 
-**When available**: *the targeted release that covers this use case*
+**When available**: First reliease
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**Channel to actor**: Keyborad.
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Secondary Actor**: N/A
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Channels to Secondary Actors**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
+**Open Issues**: Have an indicator to show that is the current color that user selected.
 
 <hr>
 

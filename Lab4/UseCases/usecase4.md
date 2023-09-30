@@ -6,32 +6,31 @@
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Drawing
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: User
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: Allow user to draw on the canvas.
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: The program must be running nad in a responsive state.
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: Pressing and hold the letf-click on the mouse and drag.
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
+**Scenario**: A user wants to draw something on the canvas using the mouse.
  
-**Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
+**Exceptions**: A pixel color will change wherever the mouse is located. This should allow me to drag and draw over the canvas like a pencil on a piece of paper.
 
-**Priority**: *relative importance of this use case compared to other use cases*
+**Priority**: High
 
-**When available**: *the targeted release that covers this use case*
+**When available**: First release.
 
-**Channel to actor**: *the means through which the primary actor and the system communicate*
+**Channel to actor**: Standerd I/O, the mouse.
 
-**Secondary Actor**: *any other actors – people or systems – that may be involved in the scenario*
+**Secondary Actor**: N/A
 
-**Channels to Secondary Actors**: *the means through which any secondary actors may interact with the system or other actors*
+**Channels to Secondary Actors**: N/A
 
-**Open Issues**: *notes, concerns, or other materials*
-
+**Open Issues**: N/A
 <hr>
 
 
