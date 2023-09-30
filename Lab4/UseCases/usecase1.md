@@ -18,7 +18,7 @@
   
 **Scenario**: User use their mouse to double click on the program's icon.
  
-**Exceptions**: After some reasonble delay, the program should show the loading screen and then enter the main scree.
+**Exceptions**: After some reasonble delay, the program should show the loading screen and then shows the window and drawable canvas.
 
 **Priority**: High
 
