@@ -6,17 +6,17 @@
 
 <hr>
 
-**Use Case**: *use-case-title*
+**Use Case**: Selecting drawing colors
 
-**Primary Actor**: *primary-actor*
+**Primary Actor**: ser
 
-**Goal in Context**: *the aim of the primary-actor in a particular circumstance*
+**Goal in Context**: Allows user to select different colors using keyboard.
 
-**Preconditions**: *conditions that must be true before the scenario may play out*
+**Preconditions**: The program must be runing.
 
-**Trigger**: *an action or actions that initiate the scenario*
+**Trigger**: Keyborad input from 1 to 8.
   
-**Scenario**: *an enumerated list of steps describing the actions and interactions of the primary actor with the system*
+**Scenario**: After pressing number keys from 1 t 8, the painting color should change acoordingly. 
  
 **Exceptions**: *errors or faults that may occur during the scenario. Should include remedy/corrective action taken by the primary actor*
 
