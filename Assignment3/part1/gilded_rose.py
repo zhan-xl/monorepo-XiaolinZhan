@@ -14,36 +14,64 @@ class Item:
 
 class GildedRose(object):
 
-    def __init__(self, items: list[Item]):
+    def __init__(self, items: list[Item], *, Max_Quality=50, Min_Quality = 0):
         # DO NOT CHANGE THIS ATTRIBUTE!!!
         self.items = items
+        # Adding keyword attributes for min, max quality and legendary quality.
+        self._Max_Quality = Max_Quality
+        self._Min_Quality = Min_Quality
 
     def update_quality(self):
         for item in self.items:
-            if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
-                if item.quality > 0:
-                    if item.name != "Sulfuras, Hand of Ragnaros":
-                        item.quality = item.quality - 1
+            if "Aged Brie" in item.name:
+                self.update_aged_brie(item)
+            elif "Sulfuras" in item.name:
+                self.update_sulfuras(item)
+            elif "Backstage passes" in item.name:
+                self.update_backstage_passes(item)
+            elif "Conjured" in item.name:
+                self.update_conjured(item)
             else:
-                if item.quality < 50:
-                    item.quality = item.quality + 1
-                    if item.name == "Backstage passes to a TAFKAL80ETC concert":
-                        if item.sell_in < 11:
-                            if item.quality < 50:
-                                item.quality = item.quality + 1
-                        if item.sell_in < 6:
-                            if item.quality < 50:
-                                item.quality = item.quality + 1
-            if item.name != "Sulfuras, Hand of Ragnaros":
-                item.sell_in = item.sell_in - 1
-            if item.sell_in < 0:
-                if item.name != "Aged Brie":
-                    if item.name != "Backstage passes to a TAFKAL80ETC concert":
-                        if item.quality > 0:
-                            if item.name != "Sulfuras, Hand of Ragnaros":
-                                item.quality = item.quality - 1
-                    else:
-                        item.quality = item.quality - item.quality
-                else:
-                    if item.quality < 50:
-                        item.quality = item.quality + 1
+                self.update_default(item)
+
+# update general items
+    def update_default(self, item):
+        item.sell_in -= 1
+        if item.quality >= self._Max_Quality:
+            return
+        else:
+            item.quality -= 1
+    
+    def update_aged_brie(self, item):
+        item.sell_in -= 1
+        if item.quality >= self._Max_Quality:
+            return
+        if item.sell_in < 0:
+            item.quality += 2
+        else :
+            item.quality += 1
+            item
+
+    def update_sulfuras(self, item):
+        pass
+
+    def update_backstage_passes(self, item):
+        item.sell_in -= 1
+        if item.sell_in < 0:
+            item.quality = 0
+            return
+        
+        if 10 >= item.sell_in > 5:
+            item.quality += 2
+        elif 5 >= item.sell_in > 0:
+            item.quality = item.quality + 3
+        elif item.sell_in <= 0:
+            item.quality = 0
+        else:
+            item.quality = item.quality + 1
+
+        item.quality = min(item.quality, self._Max_Quality)
+
+    def update_conjured(self, item):
+        item.sell_in -= 1
+        item.quality = max(item.quality - 2, self._Min_Quality)
