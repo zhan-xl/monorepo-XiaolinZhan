@@ -17,7 +17,7 @@ class GildedRose(object):
     def __init__(self, items: list[Item], *, Max_Quality=50, Min_Quality = 0):
         # DO NOT CHANGE THIS ATTRIBUTE!!!
         self.items = items
-        # Adding keyword attributes for min, max quality and legendary quality.
+        # Adding keyword attributes for min, max quality.
         self._Max_Quality = Max_Quality
         self._Min_Quality = Min_Quality
 
