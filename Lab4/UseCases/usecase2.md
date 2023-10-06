@@ -30,7 +30,7 @@
 
 **Priority**: High
 
-**When available**: First reliease
+**When available**: First release
 
 **Channel to actor**: Keyborad.
 

@@ -22,7 +22,7 @@
 
 **Priority**: High
 
-**When available**: First Relears
+**When available**: First release
 
 **Channel to actor**: The primary actor communcates through the keyboard.
 
