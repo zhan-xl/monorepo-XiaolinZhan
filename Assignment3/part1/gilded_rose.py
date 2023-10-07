@@ -98,7 +98,7 @@ class GildedRose(object):
         self.item_classes = {
             "Aged Brie": AgedBrie,
             "Sulfuras": Sulfuras,
-            "BacnstagePasses": BackstagePasses,
+            "Backstage passes": BackstagePasses,
             "Conjured": Conjured,
         }
 
