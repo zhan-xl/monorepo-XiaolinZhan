@@ -29,7 +29,7 @@ def get_root():
 
 # get request with path parameter
 @app.get("/dog/{id}")
-def get_dog_name(id: int):
+def get_dog_by_id(id: int):
     return {"dog": db[id]}
 
 
@@ -45,11 +45,10 @@ def get_dog_by_name(name: str = ""):
 # get request with path and query parameters
 @app.get("/dog/breedandfood/{dog_breed}")
 def get_dog_by_breed_and_food(dog_breed: str, food: str = ""):
-    dogs = []
     for dog in db.values():
         if dog["Breed"] == dog_breed and dog["Favorite Food"] == food:
-            dogs.append(dog)
-    return {"dogs": dogs}
+            return {"dog": dog}
+    return {"message": "No dog can be found."}
 
 
 # post request
